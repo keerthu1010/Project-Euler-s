@@ -1,8 +1,8 @@
 //Sum of multiples of 3 or 5 less than 1000
 let sum=0;
-for(let i=1; i<1000; i++){
-    if(i%3==0 | i%5==0){
-     sum += i;
+for (let i=1; i<1000; i++){
+    if (i%3==0 | i%5==0){
+        sum += i;
     }
 }
 console.log(sum);
@@ -10,11 +10,11 @@ console.log(sum);
 //Sum of even numbers of fibonacci series less than 4000000
 let arr = [1, 1];
 let sum=0;
-while(arr[1]<=4000000)
+while (arr[1]<=4000000)
 {
-    arr[1]=arr.shift()+arr[0];
+    arr[1] = arr.shift() + arr[0];
     console.log(arr);
-    if(arr[1]%2==0)
+    if (arr[1]%2 == 0)
     {
         sum += arr[1];
     }
@@ -24,16 +24,16 @@ console.log(sum);
 //Largest prime factor of a num
 let num = prompt("Enter a number to find its greatest prime factor:",0);
 function isPrime(a){
-    for(let i=2; i<a; i++){
-        if(a%i==0){
+    for (let i=2; i<a; i++){
+        if (a%i==0){
             return false;
         }
     }
     return true;
 }
 
-outer:for(let i=Math.round(Math.sqrt(num)); i>1; i--){
-    if(num%i==0 && (isPrime(i))){
+outer:for (let i=Math.round(Math.sqrt(num)); i>1; i--){
+    if (num%i==0 && (isPrime(i))){
         console.log(i);
         break outer;
     }
@@ -45,7 +45,7 @@ outer:for (let i=999; i>99; i--){
     for (let j=999; j>99; j--){
         pdt = i*j;
         let rev = parseInt(pdt.toString().split('').reverse().join(''))
-        if(pdt==rev && pdt>greatestPal){
+        if (pdt==rev && pdt>greatestPal){
             greatestPal=pdt;
         }
 
