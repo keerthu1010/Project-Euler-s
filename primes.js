@@ -8,21 +8,18 @@ for(let i=1; i<1000; i++){
 alert(sum);
 
 //Sum of even numbers of fibonacci series less than 4000000
-let a1=1;
-let a2=1;
-let f = 0;
+let arr = [1, 1];
 let sum=0;
-while(f<=4000000)
+while(arr[1]<=4000000)
 {
-    f=a1+a2;
-    a1=a2;
-    a2=f;
-    if(f%2==0)
+    arr[1]=arr.shift()+arr[0];
+    console.log(arr);
+    if(arr[1]%2==0)
     {
-        sum += f;
+        sum += arr[1];
     }
 }
-alert(sum);
+console.log(sum);
 
 //Largest prime factor of a num
 let num = prompt("Enter a number to find its greatest prime factor:",0);
@@ -54,7 +51,7 @@ outer:for (let i=999; i>99; i--){
 
     }
 }
-alert(greatestPal);
+console.log(greatestPal);
 
 //Difference between the sum of the squares and the square of the sum of 1st 100 nat numbers
 let sum=0;
@@ -63,7 +60,7 @@ for (i=1; i<=100; i++){
     sum += i;
     sumSq += i*i;
 }
-alert (Math.round(sumSq - sum*sum));
+console.log(Math.round(sumSq - sum*sum));
 
 //10001st Prime number
 function isPrime(a){
