@@ -8,10 +8,13 @@ function isPrime(a){
     console.log(a);
     return true;
 }
-let sum=0;
+/*let sum=0;
 for (let i=0; i<=2000000; i++){
     if (isPrime(i)) {
         sum += i;
     }
 }
-console.log(sum);
+console.log(sum);*/
+
+let res =fact(5);
+console.log(res);
